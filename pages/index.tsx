@@ -1,9 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import ReaderLayout from '../src/components/layout/reader'
+import { NextPageWithLayout } from '../src/models'
+import styles from '../src/styles/Home.module.css'
 
-const Home: NextPage = () => {
+const Home: NextPageWithLayout = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -68,5 +70,7 @@ const Home: NextPage = () => {
     </div>
   )
 }
+
+Home.Layout = ReaderLayout
 
 export default Home
